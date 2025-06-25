@@ -51,7 +51,7 @@ else {
     VALUES (:email, :password)"
     , [
         "email" => $email,
-        "password" => $password
+        "password" => password_hash($password, PASSWORD_BCRYPT) // hashing the password for secure
     ]);
 
     // mark that the user has logged in.
