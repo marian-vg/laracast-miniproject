@@ -54,6 +54,9 @@ else {
         "password" => password_hash($password, PASSWORD_BCRYPT) // hashing the password for secure
     ]);
 
+    login($user);
+
+
     // mark that the user has logged in.
     $_SESSION["user"] = [
         "email" => $email
