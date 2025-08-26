@@ -1,9 +1,0 @@
-<?php
-
-return [
-    "host" => "localhost",
-    "port" => "5432",
-    "dbname" => "dbname",
-    "user" => "user",
-    "password" => "password"
-];
