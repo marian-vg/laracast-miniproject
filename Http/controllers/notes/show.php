@@ -16,7 +16,7 @@ $note = $db->Query($query, [
 ])->FindOrFail();
 
 
-authorize($note['user_id_fkey'] === $currentUserID);
+authorize($note['user_id'] === $currentUserID);
 
 view("notes/show.view.php", [
 "heading" => "Note",

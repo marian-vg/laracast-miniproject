@@ -18,7 +18,7 @@ $note = $db->Query($query, [
 
 // authorize that the current user can edit the note
 
-authorize($note['user_id_fkey'] === $currentUserID);
+authorize($note['user_id'] === $currentUserID);
 
 // validate the form
 

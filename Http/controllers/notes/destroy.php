@@ -14,7 +14,7 @@ $note = $db->Query($query, [
     'id' => $_GET['id']
 ])->FindOrFail();
 
-authorize($note['user_id_fkey'] === $currentUserID);
+authorize($note['user_id'] === $currentUserID);
 
 $db->query("DELETE FROM notes WHERE id = :id", [
     "id" => $_GET['id']

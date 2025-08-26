@@ -14,7 +14,7 @@ class Database
     {
         $dsn = "pgsql:" . http_build_query($config, '', ';');
 
-        $this->connection = new PDO($dsn, 'postgres', 'Eduardo130#', [
+        $this->connection = new PDO($dsn, $config['user'], $config['password'], [
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
         ]);
     }
