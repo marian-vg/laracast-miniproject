@@ -1,6 +1,7 @@
 <?php
 
 use Core\App;
+use Core\Authenticator;
 use Core\Database;
 use Core\Validator;
 
@@ -54,7 +55,7 @@ else {
         "password" => password_hash($password, PASSWORD_BCRYPT) // hashing the password for secure
     ]);
 
-    login($user);
+    (new Authenticator)->login($user);
 
 
     // mark that the user has logged in.
